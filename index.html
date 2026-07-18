@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Eazi Profit - BS&W Suite</title>
+    <!-- LINK TO BRAND LAYER -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- BRAND LOGO COMPONENT CONTAINER -->
+        <div class="logo-container">
+            <img src="logo.png" alt="Eazi Profit Logo">
+        </div>
+
+        <h2>Eazi Profit</h2>
+        <p class="subtitle">ASTM D4007 Centrifuge Matrix</p>
+
+        <!-- ANALYTICAL CENTRIFUGE INPUT GRID -->
+        <div class="component-card">
+            <div class="input-section-header">Centrifuge Tube Readings</div>
+            
+            <div class="field-grid">
+                <div class="field-group">
+                    <label for="tubeAInput">Tube A Reading (mL)</label>
+                    <input type="number" id="tubeAInput" step="0.05" placeholder="e.g., 0.15" inputmode="decimal">
+                </div>
+                <div class="field-group">
+                    <label for="tubeBInput">Tube B Reading (mL)</label>
+                    <input type="number" id="tubeBInput" step="0.05" placeholder="e.g., 0.20" inputmode="decimal">
+                </div>
+            </div>
+
+           <!-- REPLACE THE OPERATIONAL PARAMETERS CARD SECTION IN YOUR INDEX.HTML WITH THIS -->
+<div class="input-section-header">Operational Parameters</div>
+<div class="field-grid">
+    <div class="field-group">
+        <label for="grossVolInput">Gross Observed Vol (bbl)</label>
+        <input type="number" id="grossVolInput" step="1" placeholder="e.g., 10000" inputmode="decimal">
+    </div>
+    <div class="field-group">
+        <label for="batchTempInput">Batch Gross Temp (°F)</label>
+        <input type="number" id="batchTempInput" step="0.1" placeholder="e.g., 78.8" inputmode="decimal">
+    </div>
+</div>
+<div class="field-grid">
+    <div class="field-group">
+        <label for="baseApiInput">Sample Base API @ 60°F</label>
+        <input type="number" id="baseApiInput" step="0.01" placeholder="e.g., 16.42" inputmode="decimal">
+    </div>
+</div>
+
+
+            <button id="computeBtn">Deduct & Compute NSV</button>
+            <button id="resetBtn" class="secondary-btn">Reset Suite</button>
+        </div>
+
+        <!-- ANALYTICAL OUTPUT CARDS -->
+        <div class="component-card output-card">
+            <div class="display-row">
+                <span class="display-label">Total BS&W Deduction</span>
+                <span class="display-value" id="resultBSW">--</span>
+            </div>
+            <div class="display-row">
+                <span class="display-label">Gross Standard Volume (GSV)</span>
+                <span class="display-value" id="resultGSV">--</span>
+            </div>
+            <div class="display-row">
+                <span class="display-label">Net Standard Volume (NSV)</span>
+                <span class="display-value" id="resultNSV">--</span>
+            </div>
+            <button id="copyBtn" class="brand-action-btn" style="margin-top: 16px; background-color: #0d172a;">Copy Volume Log</button>
+        </div>
+    </div>
+
+    <!-- ENGINE MODULE -->
+    <script src="app.js"></script>
+</body>
+</html>

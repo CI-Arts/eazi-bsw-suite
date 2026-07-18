@@ -1,0 +1,17 @@
+{
+  "short_name": "Eazi BS&W",
+  "name": "Eazi Profit BS&W & Net Volume Suite",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#f8fafc",
+  "theme_color": "#0d172a",
+  "display": "standalone",
+  "orientation": "portrait"
+}
