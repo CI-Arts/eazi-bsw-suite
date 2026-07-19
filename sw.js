@@ -1,4 +1,5 @@
-const CACHE_NAME = "eazi-bsw-v1";
+// UPDATE ONLY THE TOP SECTION OF SW.JS IN YOUR BSW REPOSITORY
+const CACHE_NAME = "eazi-bsw-v3"; // Incremented to v3 to completely destroy old phone memory cache!
 const ASSETS = [
   "index.html",
   "style.css",
@@ -6,8 +7,8 @@ const ASSETS = [
   "logo.png",
   "manifest.json"
 ];
+// ... leave the rest of your install/fetch listeners exactly as they were
 
-// Cache all assets for this specific module locally
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
